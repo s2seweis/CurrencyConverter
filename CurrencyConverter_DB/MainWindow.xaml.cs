@@ -1,11 +1,21 @@
-﻿using System.Windows;
-using System.Windows.Input;
-using System.Text.RegularExpressions;
-using System.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-namespace CurrencyConverter_Static
+
+namespace CurrencyConverter_DB
 {
     public partial class MainWindow : Window
     {
@@ -121,19 +131,5 @@ namespace CurrencyConverter_Static
         }
         #endregion
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void dgvCurrency_SelectedCellsChanged(object sender, System.Windows.Controls.SelectedCellsChangedEventArgs e)
-        {
-
-        }
     }
 }
