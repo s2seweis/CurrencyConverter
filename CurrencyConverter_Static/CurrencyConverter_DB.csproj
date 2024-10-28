@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -82,11 +82,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Database\CurrencyConverterDataSet.Designer.cs">
+    <Compile Include="CurrencyConverterOneDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CurrencyConverterDataSet.xsd</DependentUpon>
+      <DependentUpon>CurrencyConverterOneDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -110,16 +111,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Database\CurrencyConverterDataSet.xsc">
-      <DependentUpon>CurrencyConverterDataSet.xsd</DependentUpon>
+    <None Include="CurrencyConverterOneDataSet.xsc">
+      <DependentUpon>CurrencyConverterOneDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Database\CurrencyConverterDataSet.xsd">
+    <None Include="CurrencyConverterOneDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CurrencyConverterDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>CurrencyConverterOneDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Database\CurrencyConverterDataSet.xss">
-      <DependentUpon>CurrencyConverterDataSet.xsd</DependentUpon>
+    <None Include="CurrencyConverterOneDataSet.xss">
+      <DependentUpon>CurrencyConverterOneDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -153,14 +154,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\CurrencyConverter.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database\CurrencyConverter_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CurrencyConverter.mdf</DependentUpon>
-    </Content>
+    <Folder Include="Database\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

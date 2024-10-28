@@ -26,11 +26,33 @@ namespace CurrencyConverter_Static.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database\\Curr" +
-            "encyConverter.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=C:\\Users\\SWE\\source\\repos\\CurrencyConverter\\CurrencyConverter_Static\\" +
+            "Database\\Converter.mdf;Integrated Security=True;Connect Timeout=30")]
         public string CurrencyConverterConnectionString {
             get {
                 return ((string)(this["CurrencyConverterConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database\\Conv" +
+            "erter.mdf;Integrated Security=True")]
+        public string ConverterConnectionString {
+            get {
+                return ((string)(this["ConverterConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NB242F34R44\\SQLEXPRESS;Initial Catalog=CurrencyConverterOne;User ID=s" +
+            "a;Password=alk123;Pooling=False;Encrypt=True;TrustServerCertificate=True")]
+        public string CurrencyConverterOneConnectionString {
+            get {
+                return ((string)(this["CurrencyConverterOneConnectionString"]));
             }
         }
     }
